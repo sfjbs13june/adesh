@@ -9,8 +9,8 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 @RunWith(SpringRunner.class)
 @WebMvcTest({OperationController.class})
@@ -22,28 +22,28 @@ public class OperationControllerIntegration {
     public void addTest() throws Exception{
         long a=(long) 5.0;
         long b=(long)6.0;
-        ResultActions result = mockMvc.perform(put("/add").param("a", String.valueOf(a)).param("b", String.valueOf(b)));
+        ResultActions result = mockMvc.perform(get("/add").param("a", String.valueOf(a)).param("b", String.valueOf(b)));
         result.andExpect(status().isOk());
         String resultData=result.andReturn().getResponse().getContentAsString();
         Assertions.assertEquals(resultData,"11.0");
     }
     @Test
     public void subTest() throws Exception{
-        long a=(long) 13.0;
+        long a=(long) 11.0;
         long b=(long)6.0;
 
-        ResultActions result  = mockMvc.perform(put("/sub").param("a", String.valueOf(a)).param("b", String.valueOf(b)));
+        ResultActions result  = mockMvc.perform(post("/sub").param("a", String.valueOf(a)).param("b", String.valueOf(b)));
         result.andExpect(status().isOk());
         String resultData=result.andReturn().getResponse().getContentAsString();
-        Assertions.assertEquals(resultData,"7");
+        Assertions.assertEquals(resultData,"5");
     }
     @Test
     public void mulTest() throws Exception{
-        long a=(long) 5.0;
-        long b=(long)6.0;
-        ResultActions result  = mockMvc.perform(MockMvcRequestBuilders.post("/mul").param("a", String.valueOf(a)).param("b", String.valueOf(b)));
+        long a=(long) 11.0;
+        long b=(long) 6.0;
+        ResultActions result  = mockMvc.perform(put("/mul").param("a", String.valueOf(a)).param("b", String.valueOf(b)));
         result.andExpect(status().isOk());
         String resultData=result.andReturn().getResponse().getContentAsString();
-        Assertions.assertEquals(resultData,"30");
+        Assertions.assertEquals(resultData,"66");
     }
 }
