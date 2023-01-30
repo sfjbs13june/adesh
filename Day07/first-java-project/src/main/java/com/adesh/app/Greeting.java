@@ -6,14 +6,10 @@ public class Greeting {
         return "Hi from greeting";
     }
 
-    public double getDiv(int a,int b){
-        return a/b;
-    }
+    public String sayWelcome(){ return "welcome from greeting";}
 
-    public double getThrowException(int a,int b) throws MyDataException {
-        if(b==0){
-            throw new MyDataException("b should not be null");
-        }
-        return a/b;
-    }
+    public String sayHello(){ return "hello from greeting";}
+
+    public String sayBye(){ return "bye from greeting";}
+
 }
