@@ -35,3 +35,4 @@ public class Hospital {
         this.doctorname = doctorname;
         this.address = address;
     }
+}
