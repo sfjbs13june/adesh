@@ -7,11 +7,11 @@ public class MyclassB {
 
 
     public String getResult(){
-        return "my result";
+        return "hello";
     }
 
     public String getMyString(String data){
-        return "my result"+data;
+        return "hello"+data;
     }
 
     public int getClassCRestult(MyClassC myClassC){
