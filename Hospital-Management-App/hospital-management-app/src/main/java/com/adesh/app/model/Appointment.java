@@ -2,11 +2,10 @@ package com.adesh.app.model;
 
 public class Appointment {
 
-
-        String appointmentId;
-        String patientName;
-        String doctorName;
-        String date;
+        private String appointmentId;
+        private String patientName;
+        private String doctorName;
+        private String date;
         private Prescription prescription;
 
     public Appointment(String appointmentId, String patientName, String doctorName, String date, Prescription prescription) {
