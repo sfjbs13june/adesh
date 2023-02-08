@@ -15,7 +15,11 @@ public class Prescription {
             this.doctorName = doctorName;
         }
 
-        public String getPrescriptionId() {
+    public Prescription() {
+
+    }
+
+    public String getPrescriptionId() {
             return prescriptionId;
         }
 

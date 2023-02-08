@@ -9,14 +9,18 @@ public class Appointment {
         private Prescription prescription;
 
     public Appointment(String appointmentId, String patientName, String doctorName, String date, Prescription prescription) {
-        this.appointmentId = appointmentId;
-        this.patientName = patientName;
-        this.doctorName = doctorName;
-        this.date = date;
-        this.prescription = prescription;
+       this.appointmentId = appointmentId;
+       this.patientName = patientName;
+       this.doctorName = doctorName;
+       this.date = date;
+       this.prescription = prescription;
+  }
+
+    public Appointment() {
+
     }
 
-        public String getAppointmentId() {
+    public String getAppointmentId() {
         return appointmentId;
     }
 
