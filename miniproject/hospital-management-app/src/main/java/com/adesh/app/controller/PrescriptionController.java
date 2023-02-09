@@ -14,13 +14,15 @@ public class PrescriptionController {
     @Autowired
     PrescriptionRepository prescriptionRepository;
 
-    @RequestMapping(value = "/view-prescription", method = RequestMethod.GET)
-    public List<Prescription> getAllPrescription(@RequestParam String patientName){
+    @GetMapping("/view-prescription")
+    public List<Prescription> getAllPrescriptions(@RequestParam String patientName){
         return prescriptionRepository.findByPatientName(patientName);
     }
 
-    @RequestMapping(value = "/save-prescription", method = RequestMethod.POST)
+    @PostMapping("/save-prescription")
     public Prescription savePrescription(@RequestBody Prescription prescription){
         return prescription;
     }
+
+
 }

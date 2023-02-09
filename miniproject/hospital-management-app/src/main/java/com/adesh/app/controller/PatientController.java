@@ -14,12 +14,12 @@ public class PatientController {
     @Autowired
     AppointmentRepository appointmentRepository;
 
-    @RequestMapping(value = "/myappointment", method = RequestMethod.GET)
+    @GetMapping("/myappointment")
     public List<Appointment> getMyAppointments(@RequestParam String patientName){
         return appointmentRepository.findByPatientName(patientName);
     }
 
-    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    @PostMapping("/save")
     public Appointment saveAppointment(@RequestBody Appointment appointment){
         appointment=appointmentRepository.save(appointment);
         return appointment;
