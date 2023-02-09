@@ -12,15 +12,18 @@ import java.util.List;
 public abstract class PrescriptionRepository implements MongoRepository<T, Event.ID> {
 
     public Prescription save(Prescription prescription) {
+
         return null;
     }
 
     public List<Prescription> findAllByPatientName(String patientName) {
+
         return null;
     }
 
 
     public List<Prescription> findByPatientName(String patientName) {
+
         return null;
     }
 }
