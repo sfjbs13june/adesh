@@ -61,6 +61,8 @@ curl --location --request POST 'localhost:8080/patient/save' \
 --header 'Authorization: Basic cGF0aWVudDpwYXRpZW50' \
 --header 'Content-Type: application/json' \
 --header 'Cookie: JSESSIONID=96A89FBBE914F890798E9CC99B9695D5' \
+
+``````````
 --data-raw '{
 "appointmentId": "app03",
 "patientName": "vijay",
@@ -74,6 +76,10 @@ curl --location --request POST 'localhost:8080/patient/save' \
 "doctorName": "sahil"
 }
 }'
+````````
+
+
+
 
 **Prescription Controller**
 
@@ -87,6 +93,8 @@ curl --location --request POST 'localhost:8080/patient/save' \
 --header 'Authorization: Basic cGF0aWVudDpwYXRpZW50' \
 --header 'Content-Type: application/json' \
 --header 'Cookie: JSESSIONID=96A89FBBE914F890798E9CC99B9695D5' \
+
+````
 --data-raw '{
 "prescriptionId": "pre03",
 "appointmentId": "app03",
@@ -94,6 +102,8 @@ curl --location --request POST 'localhost:8080/patient/save' \
 "patientName": "vijay",
 "doctorName": "Sahil"
 }'
+````
+
 
 **Docker Commands**
 
