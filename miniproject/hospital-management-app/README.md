@@ -30,6 +30,7 @@ curl --location --request POST 'localhost:8080/doctor/save' \
 --header 'Authorization: Basic ZG9jdG9yOmRvY3Rvcg==' \
 --header 'Content-Type: application/json' \
 --header 'Cookie: JSESSIONID=B7E6821D388DCC56BEEA5BDB49700E17' \
+````````
 --data-raw '{
 "appointmentId": "01",
 "patientName": "pat01",
@@ -43,6 +44,8 @@ curl --location --request POST 'localhost:8080/doctor/save' \
 "doctorName":"Sahil"
 }
 }'
+````````
+
 
 
 **Patient Controller**
@@ -64,8 +67,8 @@ curl --location --request POST 'localhost:8080/patient/save' \
 "doctorName": "Sahil",
 "date": "7th feb",
 "prescription": {
-"prescriptionId": "pre0003",
-"appointmentId": "app0003",
+"prescriptionId": "pre03",
+"appointmentId": "app03",
 "description": "cold",
 "patientName": "vijay",
 "doctorName": "sahil"
@@ -85,8 +88,8 @@ curl --location --request POST 'localhost:8080/patient/save' \
 --header 'Content-Type: application/json' \
 --header 'Cookie: JSESSIONID=96A89FBBE914F890798E9CC99B9695D5' \
 --data-raw '{
-"prescriptionId": "pre0003",
-"appointmentId": "app0003",
+"prescriptionId": "pre03",
+"appointmentId": "app03",
 "description": "bp",
 "patientName": "vijay",
 "doctorName": "Sahil"
