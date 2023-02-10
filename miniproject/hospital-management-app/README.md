@@ -76,7 +76,7 @@ curl --location --request POST 'localhost:8080/patient/save' \
           "doctorName": "sahil"
 }
 }'
-````````
+
 
 
 
