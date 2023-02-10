@@ -68,12 +68,12 @@ curl --location --request POST 'localhost:8080/patient/save' \
 "patientName": "vijay",
 "doctorName": "Sahil",
 "date": "7th feb",
-"prescription": {
-"prescriptionId": "pre03",
-"appointmentId": "app03",
-"description": "cold",
-"patientName": "vijay",
-"doctorName": "sahil"
+          "prescription": {
+          "prescriptionId": "pre03",
+          "appointmentId": "app03",
+          "description": "cold",
+          "patientName": "vijay",
+          "doctorName": "sahil"
 }
 }'
 ````````
